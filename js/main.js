@@ -19,7 +19,7 @@
     });
     $('.grid').masonry({
       itemSelector: '.grid-item',
-      columnWidth: 5
+      gutter: 5
     });
     var gallery = _.template($('#gallery').html());
     $('.grid').on('click', '.grid-item', function(){
