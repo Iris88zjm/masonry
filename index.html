@@ -2,56 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
-  <title>masonry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="js/jquery/dist/jquery.min.js"></script>
   <script src="js/underscore/underscore.js"></script>
   <script src="js/masonry/dist/masonry.pkgd.min.js"></script>
   <script src="js/main.js"></script>
-  <style type="text/css">
-    * { margin: 0; padding: 0; }
-    body { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
-    .wrapper { max-width: 1000px; width: 100%;  margin: 0 auto; }
-    .wrapper h2 { padding: 20px; text-transform: uppercase; font-size: 35px; }
-    .grid { width: 100%; }
-    .grid-item { width: 24.5%; float: left; }
-    .grid-item img { width: 100%; }
-    .grid-item p { padding: 5px 0px; width:200px; font-size: 12px; text-align: center; color: #333; }
-    .info { display: none; }
-    .info.active { display: block; } 
-    .info .detail { display: none; z-index: 3; position: fixed; left: 50%; top: 200px; width: 600px; margin-left: -300px; padding: 40px; background: #fff; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
-    .info.active .detail { display: block; }
-    .btn-close { position: absolute; right: 0; top: 0; padding: 10px; font-size: 28px; line-height: 20px; cursor: pointer; }
-    .detail img { width: 100%; }
-    .info .show-overlay { display: none; z-index: 2; position: fixed; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.5; background: #000; }
-    .info.active .show-overlay { display: block; }
-    .info .text { padding: 10px 0; }
-    .info .name { padding: 10px 0; }
 
-    @media all and (max-width: 680px) {
-      .grid-item { width: 32.8%; }
-    }
-    @media all and (max-width: 580px) {
-      .grid-item { width: 49%; }
-      .info .detail { left: 0; top: 80px; margin-left: 0; width: 100%; }
-    }
-
-  </style>
 </head>
 <body>
   <div class="wrapper">
-    <h2>masonry</h2>
-    <div class="grid"></div>
-    <div class="info"></div>
-  </div>
-  <script type="text/template" id="info">
-    <div class="detail">
-      <div class="title">title: <%= title %></div>
-      <div class="name">name: <%= name %></div>
-      <div class="img"><img src="<%= img %>"></div>
-      <div class="text"><%= content %></div>
-      <a class="btn-close">&times;</a>
+    <div class="title">
+      <h2>gallery</h2>
+      <h3>show us how you wear</h3>
     </div>
+
+    <div class="grid"></div>
+
+    <div class="info"></div>
+
+  </div>
+
+  <script type="text/template" id="info">
+      <div class="detail">
+        <div class="headline clearfix">
+          <div class="user clearfix">
+            <div class="thumbnail">
+              <a href="" target="_blank">
+                <img src="<%= thumbnail %>">
+              </a>
+            </div>
+            <div class="content">
+              <div class="name">
+                <a href="" target="_blank"><%= name %></a>
+              </div>
+              <div class="message">
+                <a href="" target="_blank"><%= message %></a>
+              </div>
+            </div>
+          </div>
+          <div class="share">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="picture clearfix">
+          <div class="big-img"><img src="<%= img %>"></div>
+          <div class="show">
+            <div class="caption">shop this look</div>
+            <div class="relevant-img">
+              <a href=""><img src="<%= relevant %>"></a>
+            </div>
+          </div>
+        </div>
+        <a class="btn-close">&times;</a>
+      </div>
   </script>
 </body>
 </html>
