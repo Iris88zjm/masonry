@@ -8,7 +8,8 @@ a:link, a:hover, a:active, a:visited { text-decoration: none; color: #351611; }
 .wrapper .title { text-align: center; padding: 20px 0; text-transform: capitalize; }
 .wrapper .title h2 { font-size: 22px; }
 .wrapper .title h3 { font-size: 18px; }
-.grid-item { float: left; margin-bottom: 5px; }
+.grid-item { float: left; margin-bottom: 5px; cursor: pointer; }
+.grid-item img { display: block; }
 
 .info { display: none; }
 .info.active { display: block; } 
